@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Calibri, 'Trebuchet MS', sans-serif
+        }
+
+        .flx {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* flex-direction: column; */
+        }
+
+        .container {
+            min-height: 100vh;
+            /* background-color: yellow; */
+            background-color: rgba(223, 142, 110, 0.854)
+        }
+
+        .box {
+            /* border: 2px solid #000; */
+            margin: 0px 20px;
+            border-radius: 5px;
+            background-color: rgba(245, 245, 245, 0.563);
+
+
+        }
+
+        #title {
+            /* background-color: red; */
+            display: inline-block;
+            position: absolute;
+            top: 50px;
+            padding: 5px 10px;
+            border: 2px solid #000;
+        }
+
+        .box img {
+            width: 5%;
+            filter: saturate(0%);
+            border: 2px solid whitesmoke;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: all ease 0.3s;
+            cursor: pointer;
+        }
+
+        .box img:hover {
+            filter: saturate(100%);
+            width: 25%;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container flx">
+        <div id="title">
+            <h2>Image Collection</h2>
+        </div>
+        <div class="box flx">
+            <img src="images/img1.jpg" alt="1">
+            <img src="images/img2.jpg" alt="2">
+            <img src="images/img3.jpg" alt="3">
+            <img src="images/img4.jpg" alt="4">
+            <img src="images/img5.jpg" alt="5">
+        </div>
+    </div>
+</body>
+
+</html>
